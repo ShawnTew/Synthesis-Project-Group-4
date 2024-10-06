@@ -16,7 +16,7 @@ inlier_cloud = pcd.select_by_index(inliers)
 outlier_cloud = pcd.select_by_index(inliers, invert=True)
 inlier_cloud.paint_uniform_color([1.0, 0, 0])
 outlier_cloud.paint_uniform_color([0.6, 0.6, 0.6])
-# o3d.visualization.draw_geometries([inlier_cloud, outlier_cloud])
+o3d.visualization.draw_geometries([inlier_cloud, outlier_cloud])
 
 #CLUSTERING WITH DBSCAN
 labels = np.array(pcd.cluster_dbscan(eps=0.05, min_points=10))
@@ -43,7 +43,7 @@ for i in range(max_plane_idx):
 
 #o3d.visualization.draw_geometries([segments[i] for i in range(max_plane_idx)]+[rest])
 
-#EUCLIDEAN CLUSTERING FOR REST OF DB SCAN
+#Refined RANSAC with Euclidean clustering
 segment_models={}
 segments={}
 max_plane_idx=20
@@ -61,3 +61,18 @@ for i in range(max_plane_idx):
     segments[i]=segments[i].select_by_index(list(np.where(labels==best_candidate)[0]))
     segments[i].paint_uniform_color(list(colors[:3]))
     print("pass",i+1,"/",max_plane_idx,"done.")
+
+
+#Euclidean clustering of the rest with DBSCAN
+labels = np.array(rest.cluster_dbscan(eps=0.05, min_points=5))
+max_label = labels.max()
+print(f"point cloud has {max_label + 1} clusters")
+
+colors = plt.get_cmap("tab10")(labels / (max_label if max_label > 0 else 1))
+colors[labels < 0] = 0
+rest.colors = o3d.utility.Vector3dVector(colors[:, :3])
+
+# o3d.visualization.draw_geometries([segments.values()])
+# o3d.visualization.draw_geometries([segments[i] for i in range(max_plane_idx)]+[rest])
+o3d.visualization.draw_geometries([segments[i] for i in range(max_plane_idx)]+[rest],zoom=0.3199,front=[0.30159062875123849, 0.94077325609922868, 0.15488309545553303],lookat=[-3.9559999108314514, -0.055000066757202148, -0.27599999308586121],up=[-0.044411423633999815, -0.138726419067636, 0.98753122516983349])
+# o3d.visualization.draw_geometries([rest])
