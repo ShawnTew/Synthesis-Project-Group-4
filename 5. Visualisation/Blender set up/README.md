@@ -3,7 +3,10 @@
 ![image](assets/name.jpg)
 
 ## Abstract
-Text
+
+Hi water, marieke writing here. I added one notebook file to your folder. In this you can find the scripts i have used in blender.
+Aso, there is a zip file. Since the add on for gaussian splats (https://github.com/ReshotAI/gaussian-splatting-blender-addon) did not import the cluster name for the gaussian splats when importing a gaussian splat, I changed the code so it was possible to see the cluster per gaussian splat.
+Because before, the whole column was not visible in blender so showing the cluters was not possible.
 
 ### Hardware Requirements
 - 
