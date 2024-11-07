@@ -1,29 +1,15 @@
-# Set title here
-<!-- Qiaorui Yang, Shawn Tew, Xiaduo Zhao, Walter Kahn, Marieke van Arnhem -->
-![image](assets/name.jpg)
+# Segment Anything Model (SAM)
 
-Hi Shawn, Marieke writing here. I made two folders where we can do the output from this step: "../../7. Results/Segmented Gaussian splats/segmented_GS_GaussianMixture14.ply" and "../../7. Results/Segmented Point Cloud/cluster_GM14.ply". Could you also export your ply outputs there?
+The **Segment Anything Model (SAM)** is an advanced segmentation model capable of segmenting various types of data, including images, point clouds, and Gaussian splats. SAM leverages state-of-the-art techniques in computer vision and machine learning to provide flexible and high-quality segmentation across diverse data formats. This implementation focuses on two specific applications: segmenting point clouds and Gaussian splats. By applying SAM to these data types, users can achieve fine-grained segmentation that can be used for visualization, analysis, or further data processing.
 
 ## Abstract
-Text
-
-### Hardware Requirements
-- 
-
-### Software Requirements
-- 
-
-### Files
-- Write here where the files need to be set (in which folder) and which name
-
-
-## Installation
-```bash
-# extra information
-line for python text
-```
+This folder contains files for performing SAM-based segmentation on both point clouds and Gaussian splats. Each type of segmentation is handled in a separate Jupyter notebook:
+- **Point Cloud Segmentation**: Available in *SAM_PC.ipynb*
+- **Gaussian Splat Segmentation**: Available in *SAM_GS.ipynb*
 
 ## Steps
-- 
-[site](https://github.com/ShawnTew/Synthesis-Project-Group-4)
+1. Set up an environment with the following dependencies: `numpy`, `matplotlib`, `cv2`, `laspy`, `open3d`, and `plyfile`.
+2. Replace the placeholder file paths in each notebook with the paths to your specific files.
+3. Run the notebooks as needed.
 
+Segmented results will be saved in the folder *7. Results*.
