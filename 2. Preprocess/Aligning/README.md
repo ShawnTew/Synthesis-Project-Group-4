@@ -37,16 +37,18 @@ Running the Script
 Update File Paths:
 
 Edit the script to specify the correct file paths for your point cloud files:
-
+```
 geoslam_ply_path = "path/to/your/geoslam.ply"
 polycam_ply_path = "path/to/your/polycam.ply"
 bouwpub_ply_path = "path/to/your/bouwpub.ply"
-# ... and so on for other files
+```
+... and so on for other files
 
 Define Corresponding Points:
 
 Adjust the coordinates of the corresponding points in the script to match actual corresponding points in your point clouds:
 
+```
 geoslam_points = np.array([
     [x1, y1, z1],  # Point A in Geoslam point cloud
     [x2, y2, z2],  # Point B
@@ -58,12 +60,16 @@ bouwpub_points = np.array([
     [x2', y2', z2'],  # Corresponding Point B
     # ... more points
 ])
+```
 
 Run the Script:
 
+```
 python point_cloud_alignment.py
+```
 
 # Functions
+```
 load_ply_with_attributes(ply_path, name): Loads a PLY file using plyfile, extracts all properties and comments, and returns an Open3D point cloud along with the data and comments.
 
 load_las_with_attributes(las_path, name): Loads a LAS file using laspy, extracts all properties, and returns an Open3D point cloud along with the data.
@@ -73,6 +79,7 @@ compute_transformation(source_points, target_points, allow_scale): Computes the 
 save_ply_with_attributes(ply_path, pcd, original_data, original_comments): Saves a point cloud to a PLY file, preserving all original attributes and comments.
 
 save_transformed_ply(original_data, transformed_pcd, original_comments, save_path): Wrapper function to save the transformed point cloud.
+```
 
 # Transformation Process
 Define Corresponding Points: Specify at least three pairs of corresponding points between the source and target point clouds.
