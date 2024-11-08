@@ -54,8 +54,7 @@ press "Load project"
 
 The .ifc model should now appear on screen
 
-<iframe width="560" height="315" src="https://youtu.be/7XUUwbv6eHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+[![Video 1](https://img.youtube.com/vi/7XUUwbv6eHw/0.jpg)](https://www.youtube.com/watch?v=7XUUwbv6eHw)
 ### Point clouds in Blender 
 
 For the point cloud we use the method described by Florent Poux in https://www.youtube.com/watch?v=DCkFhHNeSc0&t=630s specifically 4,5 and with a slightly different set-up for setting up the lighting.
@@ -100,7 +99,10 @@ Now the process has been set up and the user can change the Viewport to "Viewpor
 
 Open the options for the Shading and turn of the "Scene Light" and "Scene World". Now the point cloud blender setup has been completed.
 
-<iframe width="560" height="315" src="https://youtu.be/H_8cY9wxN3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+[![Video 2](https://img.youtube.com/vi/H_8cY9wxN3c/0.jpg)](https://www.youtube.com/watch?v=H_8cY9wxN3c)
+
 
 [site](https://github.com/ShawnTew/Synthesis-Project-Group-4)
 
