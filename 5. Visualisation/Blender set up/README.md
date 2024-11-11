@@ -1,6 +1,6 @@
 # Blender setup
 <!-- Qiaorui Yang, Shawn Tew, Xiaduo Zhao, Walter Kahn, Marieke van Arnhem -->
-![image](assets/name.jpg)
+![image](../../assets/BlenderHeaderImage.png)
 
 ## Abstract
 
@@ -19,8 +19,6 @@ Because before, the whole column was not visible in blender so showing the clute
 - Blender 4.2 or later
 - Blender Add-on Bonsai
 - Blender Add-on Gaussian splatting Blender Addon originally by ReshotAI slightly adjusted to allow for the visualisation of the 
-- Blender Add-on Camera Array by Olli Huttunnen
-
 
 ### Files
 - Gaussian splatted .ply file from step 3
@@ -29,7 +27,40 @@ Because before, the whole column was not visible in blender so showing the clute
 
 
 ## Installation
-For the installation of the Gaussian splat tool which is based on 
+
+Here is the explanation on how to install the three different addon's needed
+
+### Gaussian splat in Blender
+
+For the installation of the Gaussian splat tool which is based on ReshotAI. The add-on has been slightly changed.
+
+Download the included zip file
+
+Open Blender 
+
+Go to the ribbon tab "edit" and click on the option "Preferences" or press Ctrl , to open the preferences menu.
+
+Go to "Get Extensions"
+
+If this is the first time in this menu allow to search for global searching of extensions
+
+Press the down arrow in the top right corner of the preferences and click on "Install from disk"
+
+Navigate towards the location of the downloaded repository and click on "install from Disk" in the bottom right.
+
+### IFC models in Blender
+
+For the installation of the Gaussian splat tool which is based on ReshotAI. The add-on has been slightly changed.
+
+Open Blender 
+
+Go to the ribbon tab "edit" and click on the option "Preferences" or press Ctrl , to open the preferences menu.
+
+Go to "Get Extensions"
+
+If this is the first time in this menu allow to search for global searching of extensions
+
+Use "Search Extensions" and look for "Bonsai" click on install now the plug-in is installed. 
 
 ## Steps
 
@@ -37,8 +68,29 @@ This explains the steps for setting up the Blender process for the three differe
 
 ### Gaussian splat in Blender
 
+Open Blender
 
+Remove all objects from the standard file
 
+Open the transform menu by pressing n
+
+On the right side of the viewport a list of menu's opens
+
+Click on the one called "3D Gaussian Splatting"
+
+Click on the "Import Gaussian Splatting" button
+
+navigate to the location of the splatted .ply file
+
+On the screen a cloud of diamonds will appear these are the splats
+
+To visualize the splats as elipses change the "As point cloud (faster)" button to off
+
+Switch the rendering mode to Viewport Shading
+
+Now the gaussian splat is imported the correct colors take a while to load.
+
+[![Video 1](https://img.youtube.com/vi/gr_CM2CnTuo/0.jpg)](https://youtu.be/gr_CM2CnTuo)
 
 ### IFC models in Blender
 
@@ -54,7 +106,7 @@ press "Load project"
 
 The .ifc model should now appear on screen
 
-[![Video 1](https://img.youtube.com/vi/7XUUwbv6eHw/0.jpg)](https://www.youtube.com/watch?v=7XUUwbv6eHw)
+[![Video 2](https://img.youtube.com/vi/7XUUwbv6eHw/0.jpg)](https://www.youtube.com/watch?v=7XUUwbv6eHw)
 ### Point clouds in Blender 
 
 For the point cloud we use the method described by Florent Poux in https://www.youtube.com/watch?v=DCkFhHNeSc0&t=630s specifically 4,5 and with a slightly different set-up for setting up the lighting.
@@ -99,9 +151,7 @@ Now the process has been set up and the user can change the Viewport to "Viewpor
 
 Open the options for the Shading and turn of the "Scene Light" and "Scene World". Now the point cloud blender setup has been completed.
 
-
-
-[![Video 2](https://img.youtube.com/vi/H_8cY9wxN3c/0.jpg)](https://www.youtube.com/watch?v=H_8cY9wxN3c)
+[![Video 3](https://img.youtube.com/vi/H_8cY9wxN3c/0.jpg)](https://www.youtube.com/watch?v=H_8cY9wxN3c)
 
 
 [site](https://github.com/ShawnTew/Synthesis-Project-Group-4)
