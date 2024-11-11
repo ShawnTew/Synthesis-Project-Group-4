@@ -7,7 +7,7 @@ Polycam App: Available for iOS, Android, or via the web at Polycam. Install the 
 Optional Hardware
 A mobile device with LiDAR capability (e.g., iPhone Pro models or iPads with LiDAR) for higher-quality scans. Standard mobile cameras also work but may produce lower detail.
 
-##Steps to Generate a Point Cloud in Polycam
+## Steps to Generate a Point Cloud in Polycam
 1. Capture the Scene or Object
 Open the Polycam app and choose the Capture mode.
 Use your device's camera to scan the object or scene. Move around to capture multiple angles, ensuring you cover all visible surfaces to get a comprehensive model.
